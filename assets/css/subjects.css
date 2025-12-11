@@ -1,0 +1,83 @@
+:root {
+  --glass: rgba(255, 255, 255, 0.2);
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --accent: #ffd42a;
+  --muted: #bfc3d2;
+}
+
+/* Title & Subtitle */
+.page-title {
+  font-size: 32px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.page-title .highlight {
+  color: var(--accent);
+}
+
+.sub {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+/* Subjects Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Subject Card (Glass) */
+.subject-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Subject Title */
+.subject-card .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+/* Subject Details (optional) */
+.subject-card .details {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 520px) {
+  .page-title {
+    font-size: 26px;
+  }
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+  .subject-card {
+    padding: 20px;
+  }
+  .subject-card .title {
+    font-size: 18px;
+  }
+}

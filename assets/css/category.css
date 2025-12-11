@@ -1,0 +1,23 @@
+.subjects-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 20px;
+}
+
+.subject-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  padding: 20px;
+  border-radius: 18px;
+  color: var(--accent);
+  box-shadow: var(--shadow);
+  display: block;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+}

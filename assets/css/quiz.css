@@ -1,0 +1,116 @@
+:root {
+  --glass: rgba(255, 255, 255, 0.15);
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --accent: #ffd42a;
+  --text: #ffffff;
+  --muted: #bfc3d2;
+}
+
+/* Container for intro and quiz */
+.quiz-intro,
+.quiz-container {
+  padding: 60px 0;
+}
+
+.quiz-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.quiz-card h1 {
+  margin: 0 0 12px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.meta {
+  opacity: 0.85;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ======================
+   Question text
+   ====================== */
+.question-text {
+  font-size: 26px;
+  line-height: 1.3;
+  margin-bottom: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ======================
+   Answer Options
+   ====================== */
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* HYBRID STYLE: Glass + Duolingo Size */
+.answer-option {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 16px 20px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.answer-option:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.answer-option:active {
+  transform: scale(0.98);
+}
+
+.answer-option.selected {
+  border-color: var(--accent);
+  background: rgba(255, 212, 42, 0.22);
+}
+
+/* ======================
+   Navigation Buttons
+   ====================== */
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.nav-row button {
+  min-width: 120px;
+}
+
+/* ======================
+   Responsive
+   ====================== */
+@media (max-width: 520px) {
+  .question-text {
+    font-size: 22px;
+  }
+  .answer-option {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+}

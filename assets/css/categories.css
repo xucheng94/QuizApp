@@ -1,0 +1,32 @@
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  display: block;
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  transition: 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+}
+
+.category-card .title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.category-card .details {
+  opacity: 0.85;
+  margin-top: 6px;
+}
